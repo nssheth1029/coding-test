@@ -1,0 +1,22 @@
+{
+  "name": "coding-test",
+  "version": "1.0.0",
+  "description": "Coding Test to create a simple REST Server",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nirav Sheth",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.0",
+    "express": "^4.13.4",
+    "fast-csv": "^2.0.0"
+  },
+  "devDependencies": {
+    "expect": "^1.20.1",
+    "mocha": "^2.5.3",
+    "should": "^8.4.0",
+    "supertest": "^1.2.0"
+  }
+}
