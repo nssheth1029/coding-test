@@ -46,7 +46,7 @@ function getGammaCompanyData(companyID) {
         result.push({
           period: o.period,
           value: value
-        })
+        });
       }
     }
     return result;
@@ -81,7 +81,7 @@ function getMatching(allItems, item) {
 function roundResults(result) {
   return new Promise((resolve) => {
     for (let r of result) {
-      r.value = parseFloat(Math.round(r.value * 10000) / 10000);
+      r.value = Math.round(r.value * 10000) / 10000;
     }
     resolve(result);
   });

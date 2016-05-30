@@ -12,12 +12,10 @@ let data = {
 
 function preloadData() {
   if (!process.env.LOOKUP_FILE) {
-    console.error("LOOKUP_FILE environment variable not set.");
-    process.exit(1);
+    return Promise.reject(new Error("LOOKUP_FILE environment variable not set."));
   }
   if (!process.env.DATA_FILE) {
-    console.error("DATA_FILE environment variable not set.");
-    process.exit(1);
+    return Promise.reject(new Error("DATA_FILE environment variable not set."));
   }
   return bluebird.join(loadLookupFile(process.env.LOOKUP_FILE), loadDataFile(process.env.DATA_FILE), (lookupData, companyData) => {
     data.lookup = lookupData;
@@ -25,9 +23,6 @@ function preloadData() {
     for (let type of data.lookup) {
       data.types.push(type.mnemonic);
     }
-  }).catch(e => {
-    console.log(e);
-    process.exit(1);
   });
 }
 

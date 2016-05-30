@@ -7,7 +7,7 @@ config.preloadData().then(() => {
   const server = require("./server");
   server.start();
 }).catch(err => {
-  console.log("Error Starting Server");
+  console.log("Error Starting Server: " + err.message);
   console.log(err);
   process.exit(1);
 });
