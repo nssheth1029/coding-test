@@ -25,6 +25,9 @@ function preloadData() {
     for (let type of data.lookup) {
       data.types.push(type.mnemonic);
     }
+  }).catch(e => {
+    console.log(e);
+    process.exit(1);
   });
 }
 
@@ -35,7 +38,9 @@ function loadLookupFile(filePath) {
           console.error("Error Reading the Lookup File.");
           reject(err);
         }
-        resolve(JSON.parse(result));
+        else {
+          resolve(JSON.parse(result));
+        }
       })
   });
 }
@@ -45,7 +50,7 @@ function loadDataFile(filePath) {
     let companyData = [];
     csv.fromPath(filePath, {delimiter: '\t'}).on("data", data => {
       if (data.length != 5) {
-        throw new Error("Incorrect CSV Data Format.");
+        reject(new Error("Incorrect CSV Data Format."));
       }
       try {
         companyData.push({
