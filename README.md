@@ -19,7 +19,7 @@ node .
 ```
 Server can be accessed using the following URL.
 ```
-https://localhost:8080/v1/data-items/gamma?company_id=124423
+http://localhost:8080/v1/data-items/gamma?company_id=124423
 ```
 
 ### Running Test
