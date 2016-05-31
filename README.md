@@ -13,8 +13,8 @@ $ npm install --production
 #### Starting REST Server
 To start the REST server you need to export 2 enviornment variable which point to the lookup and data files. These location must be specified as absolute locations.
 ```
-export LOOKUP_FILE=<filePath>
-export DATA_FILE=<filePath>
+export LOOKUP_FILE=<AbsolutefilePath>
+export DATA_FILE=<AbsolutefilePath>
 node .
 ```
 Server can be accessed using the following URL.
@@ -24,8 +24,8 @@ https://localhost:8080/v1/data-items/gamma?company_id=124423
 
 ### Running Test
 ```
-export LOOKUP_FILE=<filePath>
-export DATA_FILE=<filePath>
+export LOOKUP_FILE=<AbsolutefilePath>
+export DATA_FILE=<AbsolutefilePath>
 mocha
 ```
 **Note**: If you get an error when executing the **mocha** command then you must install mocha in the global space. Using the following command:
