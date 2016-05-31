@@ -3,7 +3,7 @@ This coding exercise is implemented using NodeJS.
 
 #### Installation
 
-**Note: **Ensure you have the latest version of NodeJS installed on your system. Instructions to install/download NodeJS can be found at: https://nodejs.org
+**Note:** Ensure you have the latest version of NodeJS installed on your system. Instructions to install/download NodeJS can be found at: https://nodejs.org
 
 ##### For Development / Testing
 ```
